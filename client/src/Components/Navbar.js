@@ -29,8 +29,8 @@ export default function Navbar({ fixed }) {
 
             
           </div>
-          <h1 className="text-lg font-bold hover:animate-pulse text-white -ml-36">{screenName}</h1>
-          <div onClick={() => navigate("/profile/jobs")} className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-end">
+
+          <div onClick={() => navigate("/settings")} className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-end">
             <FontAwesomeIcon icon={faCircleUser} className="cursor-pointer text-white text-2xl leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase" />
           </div>
           

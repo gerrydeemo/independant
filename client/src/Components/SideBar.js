@@ -1,5 +1,5 @@
 import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faHardHat,faBookOpen,faHandshake,faCog} from "@fortawesome/free-solid-svg-icons";
+import {faHardHat,faBookOpen,faHandshake,faCog,faBuildingUser, faCalendar, faMoneyCheck} from "@fortawesome/free-solid-svg-icons";
 import React,{useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 
@@ -12,6 +12,7 @@ export default function SideBar() {
     const Sub = name.substr(name.indexOf(' ') + 1);
     var LoName2 = Sub.charAt(0)
     var LoName3 = LoName + LoName2
+    
     return (
       <div className="float-left w-1/5 h-screen" style={{backgroundColor: "#0E0E0E"}}>
           <div className="justify-center inline">
@@ -22,18 +23,25 @@ export default function SideBar() {
             <h1 className="text-white text-xs">{email}</h1>
             <div className="mt-10"></div>
             <div className="w-full px-3">
-              <h1 onClick={() => navigate("/profile/jobs")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg border-b-2 border-white w-full py-3 rounded-b-lg">
+              <h1 onClick={() => navigate("/")} className={"hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg border-b-2 border-white w-full py-3 rounded-b-lg"}>
               <FontAwesomeIcon icon={faHardHat} /> JOBS
               </h1>
-              <h1 onClick={() => navigate("/profile/requests")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg  border-b-2 border-white w-full py-3 rounded-b-lg">
+              <h1 onClick={() => navigate("/requests")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg  border-b-2 border-white w-full py-3 rounded-b-lg">
               <FontAwesomeIcon icon={faBookOpen} /> REQUESTS
               </h1>
-              <h1 onClick={() => navigate("/profile/offers")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg border-b-2 border-white w-full py-3 rounded-b-lg">
+              <h1 onClick={() => navigate("/offers")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg border-b-2 border-white w-full py-3 rounded-b-lg">
               <FontAwesomeIcon icon={faHandshake} /> OFFERS
               </h1>
-              <h1 onClick={() => navigate("/profile/settings")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg border-b-2 border-white w-full py-3 rounded-b-lg">
-              <FontAwesomeIcon icon={faCog} /> SETTINGS
+              <h1 onClick={() => navigate("/employment")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg border-t-2 border-white w-full py-3 rounded-t-lg mt-10">
+              <FontAwesomeIcon icon={ faBuildingUser} /> EMPLOYMENT
               </h1>
+              <h1 onClick={() => navigate("/pay&benefits")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg border-t-2 border-white w-full py-3 rounded-t-lg">
+              <FontAwesomeIcon icon={ faMoneyCheck} /> PAY & BENEFITS
+              </h1>
+              <h1 onClick={() => navigate("/holidays")} className="hover:bg-white hover:text-black hover:border-black cursor-pointer text-white font-semibold text-lg border-t-2 border-white w-full py-3 rounded-t-lg">
+              <FontAwesomeIcon icon={ faCalendar} /> HOLIDAYS
+              </h1>
+              
             </div>
           </div>
       </div>

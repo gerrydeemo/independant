@@ -1,15 +1,17 @@
 import './App.css';
 import {useNavigate, Routes, Route, useLocation} from 'react-router-dom';
-import Home from "./Screens/Home";
 import Login from "./Screens/Login";
 import Register from "./Screens/Register";
 import Jobs from "./Screens/Profile/Jobs";
 import Offers from "./Screens/Profile/Offers";
 import Requests from "./Screens/Profile/Requests";
 import Settings from "./Screens/Profile/Settings";
+import Pay from "./Screens/ProfileEmployment/Pay";
+import Holidays from "./Screens/ProfileEmployment/Holidays";
+import Employment from "./Screens/ProfileEmployment/Employment";
 import React,{useEffect, useState} from "react"
 
-//test
+
 
 function App() {
   const navigate = useNavigate();
@@ -23,13 +25,15 @@ function App() {
     <div className="App">
       
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/profile/jobs" element={<Jobs />} />
-          <Route exact path="/profile/offers" element={<Offers />} />
-          <Route exact path="/profile/requests" element={<Requests />} />
-          <Route exact path="/profile/settings" element={<Settings />} />
+          <Route exact path="/" element={<Jobs />} />
+          <Route exact path="/offers" element={<Offers />} />
+          <Route exact path="/requests" element={<Requests />} />
+          <Route exact path="/settings" element={<Settings />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/pay&benefits" element={<Pay />} />
+          <Route path="/holidays" element={<Holidays />} />
+          <Route path="/employment" element={<Employment />} />
         </Routes>
 
     </div>

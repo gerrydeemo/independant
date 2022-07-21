@@ -4,9 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import React,{ useState,useEffect } from 'react';
 
 export default function Offers() {
-    useEffect(() => {
-        localStorage.setItem("pageName", JSON.stringify("Offers"))
-      })
     const Offer = () => {
         return (
         <div>
