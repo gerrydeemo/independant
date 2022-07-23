@@ -86,7 +86,7 @@ export default function Jobs () {
         disabled={request() ? true: false} 
         onClick={() => handleRequest(shop)} 
         type="submit" 
-        className={request() ? "bg-white w-2/4 border-2 border-black h-12 rounded-2xl font-semibold pl-3 text-black placeholder:text-white" : "bg-black w-2/4 border-2 border-black h-12 rounded-2xl font-semibold pl-3 text-white placeholder:text-white cursor-pointer hover:bg-white hover:text-black" } 
+        className={request() ? "bg-white w-2/4 shadow-md shadow-slate-400 h-12 rounded-2xl font-semibold pl-3 text-black placeholder:text-white" : "bg-black w-2/4 border-2 border-black h-12 rounded-2xl font-semibold pl-3 text-white placeholder:text-white cursor-pointer hover:bg-white hover:text-black" } 
         value={request() ? "Requested" : "Request To Join"}
         />
       )
@@ -99,7 +99,7 @@ export default function Jobs () {
         <div className="mx-auto w-4/5 float-right ">
           {shops.map((shop) => {
             return (
-            <div className=" bg-white border-2 border-black h-64 w-5/12 mt-5 mx-auto rounded-2xl">
+            <div className=" bg-white border-2 shadow-md  h-64 w-5/12 mt-5 mx-auto rounded-2xl">
             <h1 className="text-left pl-10 pt-5 font-bold text-2xl ">{shop.name}</h1>
             <h1 className="text-left pl-10 pt-1 font-semibold text-sm">{shop.location}</h1>
             <h1 className="text-left pl-10 pt-1 font-semibold text-xs">Please Confirm This Is The Correct Shop Before Requesting</h1>

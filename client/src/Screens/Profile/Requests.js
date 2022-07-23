@@ -37,7 +37,7 @@ export default function Requests() {
             <div className="mx-auto w-4/5 float-right ">
             {requests.map((request) => {
                 return (
-                <div className=" bg-white border-2 border-black h-64 w-5/12 mt-5 mx-auto rounded-2xl">
+                <div className=" bg-white shadow-md  h-64 w-5/12 mt-5 mx-auto rounded-2xl">
                     <h1 className="text-left pl-10 pt-5 font-bold text-2xl ">{request.name}</h1>
                     <h1 className="text-left pl-10 pt-1 font-semibold text-sm">{request.location}</h1>
                 </div>

@@ -22,7 +22,7 @@ function App() {
   },[])
   
   return (
-    <div className="App">
+    <div className="App h-screen">
       
         <Routes>
           <Route exact path="/" element={<Jobs />} />

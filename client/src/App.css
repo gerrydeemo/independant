@@ -12,7 +12,27 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+::-webkit-scrollbar {
+  width: 2px;
+  height: 90%;
 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+  border-radius: 10%;  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
