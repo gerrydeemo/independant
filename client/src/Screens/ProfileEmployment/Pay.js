@@ -14,6 +14,7 @@ function Pay() {
     Display deductions
     Display net pay
     Display salary left to get paid
+    Pension
     </>
   )
 }
