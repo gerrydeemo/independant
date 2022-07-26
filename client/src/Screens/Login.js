@@ -45,7 +45,7 @@ export default function Home() {
                 console.log(data)
             
                 localStorage.setItem("userData", JSON.stringify(data));
-                navigate("/");
+                navigate("/jobs");
             } catch(e) {
                 setErrorShow(true);
                 setErrorMessage("Invalid work number or password or invalid admin status");

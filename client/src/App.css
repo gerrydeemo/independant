@@ -18,9 +18,14 @@
 
 }
 
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
+}
+.fc .fc-col-header-cell-cushion { /* needs to be same precedence */
+  padding-top: 5px; /* an override! */
+  padding-bottom: 5px; /* an override! */
 }
 
 /* Handle */
@@ -43,7 +48,19 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.table {
+  margin: 0 auto 20px;
+}
 
+.today {
+  background-color: #009e6c;
+  color: #fff;
+}
+
+.in-prev-month,
+.in-next-month {
+  opacity: 0.5;
+}
 .App-link {
   color: #61dafb;
 }

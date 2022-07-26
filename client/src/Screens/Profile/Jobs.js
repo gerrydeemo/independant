@@ -11,11 +11,6 @@ export default function Jobs () {
   const [shops, setShops] = useState([])
   const navigate = useNavigate()
     useEffect(() => {
-      const userData = localStorage.getItem("userData")
-      console.log(userData)
-      if (userData === null) {
-          navigate("/login")
-      }
       fetchData()
     },[])
 

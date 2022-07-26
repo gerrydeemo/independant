@@ -235,6 +235,7 @@ export default function Settings()  {
             }
             </td>
           </tr>
+          
         </table>
         </center>
         <div>

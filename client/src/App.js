@@ -15,17 +15,21 @@ import React,{useEffect, useState} from "react"
 
 function App() {
   const navigate = useNavigate();
+  // check if userData is in localStorage if not redirect to login page
   useEffect(() => {
-    if(window.location.pathname === "/profile"){
-      navigate("/profile/jobs")
+    const userData = localStorage.getItem('userData')
+    if(!userData){
+      navigate("/login")
     }
-  },[])
-  
+    else if(window.location.pathname === "/"){
+      navigate("/login")
+    }
+  }, [])
   return (
     <div className="App h-screen">
       
         <Routes>
-          <Route exact path="/" element={<Jobs />} />
+          <Route exact path="/jobs" element={<Jobs />} />
           <Route exact path="/offers" element={<Offers />} />
           <Route exact path="/requests" element={<Requests />} />
           <Route exact path="/settings" element={<Settings />} />
