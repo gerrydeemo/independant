@@ -11,7 +11,10 @@ import Holidays from "./Screens/ProfileEmployment/Holidays";
 import Employment from "./Screens/ProfileEmployment/Employment";
 import React,{useEffect, useState} from "react"
 
-
+import AdminLogin from "./Screens/Admin/AdminLogin";
+import JoinRequests from "./Screens/Admin/JoinRequests";
+import Employees from "./Screens/Admin/Employees";
+import EmployeeHolidays from "./Screens/Admin/EmployeeHolidays";
 
 function App() {
   const navigate = useNavigate();
@@ -29,6 +32,7 @@ function App() {
     <div className="App h-screen">
       
         <Routes>
+        {/*employee*/}
           <Route exact path="/jobs" element={<Jobs />} />
           <Route exact path="/offers" element={<Offers />} />
           <Route exact path="/requests" element={<Requests />} />
@@ -38,6 +42,11 @@ function App() {
           <Route path="/pay&benefits" element={<Pay />} />
           <Route path="/holidays" element={<Holidays />} />
           <Route path="/employment" element={<Employment />} />
+          {/*admin*/}
+          <Route path="adminLogin" element={<AdminLogin />} />
+          <Route path="JoinRequests" element={<JoinRequests />} />
+          <Route path="Employee" element={<Employees />} />
+          <Route path="EmployeeHolidays" element={<EmployeeHolidays/>} />
         </Routes>
 
     </div>

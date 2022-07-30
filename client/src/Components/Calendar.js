@@ -16,7 +16,7 @@ const Calendar = () => {
       localStorage.setItem("selectedDate", date)
     }
   }
-
+  
   return(
     <center>
     <Fragment>
@@ -47,6 +47,7 @@ const Calendar = () => {
       </table>
       <div className="flex w-1/2">
       <button className="w-full py-5 mx-10 bg-black text-white text-lg font-bold rounded-lg active:bg-[#009e6c] shadow-md shadow-black hover:shadow-none" onClick={getPrevMonth}>Prev</button>
+      
       <button className="w-full py-5 mx-10 bg-black text-white text-lg font-bold rounded-lg active:bg-[#009e6c] shadow-md shadow-black hover:shadow-none" onClick={getNextMonth}>Next</button>
       </div>
     </Fragment>

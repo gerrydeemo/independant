@@ -3,14 +3,17 @@ import Navbar from '../../Components/Navbar';
 import SideBar from '../../Components/SideBar';
 import Calendar from "../../Components/Calendar";
 import {motion} from "framer-motion";
-function Holidays() {
+function Holidays() { 
+
+  const [isOpen, setIsOpen] = useState(false);
+
   const [yesButton, setYesButton] = useState(false)
   const [no, setNo] = useState()
   return (
     <>
     <Navbar/>
     <SideBar/>
-    <div className="mx-auto w-4/5 float-right ">
+    <div className="mx-auto wi-4/5 float-right ">
       <div className="w-full text-center ">
         <div className="w-full">
           <Calendar/>
